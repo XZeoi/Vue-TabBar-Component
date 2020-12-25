@@ -1,20 +1,20 @@
 <template>
   <div>
     <tab-bar>
-      <tab-bar-item link="/home">
-        <i slot="icon-slot" class="iconfont icon-home" ></i>
+      <tab-bar-item link="/home" activeColor="blue">
+        <i slot="icon-slot" class="iconfont icon-home"></i>
         <span slot="text-slot">首页</span>
       </tab-bar-item>
       <tab-bar-item link="/category">
-        <i slot="icon-slot" class="iconfont icon-category" ></i>
+        <i slot="icon-slot" class="iconfont icon-category"></i>
         <span slot="text-slot">分类</span>
       </tab-bar-item>
       <tab-bar-item link="/cart">
-        <i slot="icon-slot" class="iconfont icon-cart" ></i>
+        <i slot="icon-slot" class="iconfont icon-cart"></i>
         <span slot="text-slot">购物车</span>
       </tab-bar-item>
       <tab-bar-item link="/profile">
-        <i slot="icon-slot" class="iconfont icon-user" ></i>
+        <i slot="icon-slot" class="iconfont icon-user"></i>
         <span slot="text-slot">我的</span>
       </tab-bar-item>
     </tab-bar>

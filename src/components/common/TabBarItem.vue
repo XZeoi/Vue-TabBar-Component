@@ -1,6 +1,6 @@
 <template>
   <div id="tab-bar-item">
-    <div class="item-container"  :class="{active: isActive}" @click="itemClick"> 
+    <div class="item-container"  :style="activeStyle" @click="itemClick"> 
       <div class="icon-area">
         <slot name="icon-slot"></slot>
       </div>
@@ -19,11 +19,18 @@ export default {
     link: {
       type: String,
       required: true
+    },
+    activeColor: {
+      type: String,
+      default: '#ff8198'
     }
   },
   computed: {
     isActive() {
       return this.$route.path.indexOf(this.link) !== -1
+    },
+    activeStyle() {
+      return this.isActive ? { color: this.activeColor } : {}
     }
   },
   methods: {
@@ -53,8 +60,5 @@ export default {
 }
 .text-area {
   font-size: 12px;
-}
-.active {
-  color: #ff8198;
 }
 </style>
